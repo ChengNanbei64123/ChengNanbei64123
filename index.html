@@ -560,7 +560,8 @@
         
           
           需求:导航栏页面可左右滑动，可点击跳转页面。效果图
-1.wxml：1234567891011121314151617181920&lt;view&gt;  &lt;swiper class=&quot;categoryList&quot; indicator-dots=&quot;true&quot;   indicator-color=&quot;rgba(228,228,228,1)&quot;   indicator-active-color=&quot;#FECA49&quot;&gt;  &lt;block wx:for=&quot;&#123;&#123;categoryList&#125;&#125;&quot; wx:key=&quot;item&quot;&gt;  &lt
+1.wxml：1234567891011121314151617181920&lt;view&gt;  &lt;swiper class=&quot;categoryList&quot; indicator-dots=&quot;true&quot;   indicator-color=&quot;rgba(228,228,228,1)&quot;   indicator-active-color=&quot;#FECA49&quot;&gt;  &lt;block wx:for=&quot;&#123;&#123;categoryList&#125;&#125;&quot; wx:key=&quot;item&quot;&gt;  &lt;swiper-item&gt;  &lt;block wx:for=&quot;&#123;&#123;item&#125;&#125;&quot; wx:key=&quot;item&quot;&gt;    &lt;view class=&quot;category-info&quot;&gt;      &lt;navigator url=&quot;&#123;&#123;item.url&#125;&#125;&quot; open-type=&quot;navigate&quot; hover-class=&quot;other-navigator-hover&quot;&gt;        &lt;image src=&quot;&#123;&#123;item.src&#125;&#125;&quot;         class=&quot;category-image&quot;&gt;&lt;/image&gt;        &lt;view class=&quot;category-text&quot;&gt;&#123;&#123;item.name&#125;&#125;&lt;/view&gt;      &lt;/navigator&gt;    &lt;/view&gt;  &lt;/block&gt;  &lt;/swiper-item&gt;  &lt;/block&gt;  &lt;/swiper&gt;&lt;/view&gt;
+2.wxss:12345678910111213141516171819202122.category
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -740,8 +741,9 @@
         
           
           需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &quot;vue&quot;;export default new Vue();
-2.组件A,点击事件传递参数。1234567891011121314151617&lt;div class=&quot;letn&quot; @click=&quot;Allchannels&quot;&gt;&lt;script&gt;//引入中间媒介import bus from &apos;@/assets/bus&apos;export default &#123;	data():&#123;		return:switcha	&#125;	methods:&#123;		
-          ...
+2.组件A,点击事件传递参数。1234567891011121314151617&lt;div class=&quot;letn&quot; @click=&quot;Allchannels&quot;&gt;&lt;script&gt;//引入中间媒介import bus from &apos;@/assets/bus&apos;export default &#123;	data():&#123;		return:switcha	&#125;	methods:&#123;		Allchannels()&#123;	      //通过emit触发事件，并传值	      bus.$emit(&quot;eventTarget&quot;,this.switcha);    	&#125;	&#125;&#125;&lt;/script&gt;
+3.组件B,接收组件A的传值。1234567891011121314151617&lt;div class=&quot;.dialog&quot; v-if=&quot;switcha&quot;&gt;&lt;script&gt;import bus from &apos;@/assets/bus&apos;export default &#123;   data() &#123;      return &#123;        switcha:false      &#125;   &#125;,   mounted()&#123;     //通过on监听事件，回调方法获取数据      bus.$on(&quot;eventTarget&quot;,res=&gt;&#123;        this.switcha = res;      &#125;)   &#125;&#125;&lt;/script&gt;
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/29/Vue/#more" rel="contents">
