@@ -560,7 +560,7 @@
         
           
           需求:导航栏页面可左右滑动，可点击跳转页面。效果图
-1.wxml：1234567891011121314151617181920&lt;view&gt;  &lt;swiper class=&quot;categoryList&quot; indicator-dots=&quot;true&quot
+1.wxml：1234567891011121314151617181920&lt;view&gt;  &lt;swiper class=&quot;categoryList&quot; indicator-dots=&quot;true&quot;   indicator-color=&quot;rgba(228,228,228,1)&quot;   indicator-active-color=&quot;#FECA49&quot;&gt;  &lt;block wx:for=&quot;&#123;&#123;categoryList&#125;&#125;&quot; wx:key=&quot;item&quot;&gt;  &lt
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -740,7 +740,7 @@
         
           
           需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &quot;vue&quot;;export default new Vue();
-2.组件A,点击事件传递参数。1234567891011121314151617&l
+2.组件A,点击事件传递参数。1234567891011121314151617&lt;div class=&quot;letn&quot; @click=&quot;Allchannels&quot;&gt;&lt;script&gt;//引入中间媒介import bus from &apos;@/assets/bus&apos;export default &#123;	data():&#123;		return:switcha	&#125;	methods:&#123;		
           ...
           <!--noindex-->
           <div class="post-button text-center">
