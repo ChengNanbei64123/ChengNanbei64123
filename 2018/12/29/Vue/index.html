@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &quot;vue&quot;;export default new Vue(); 2.组件A,点击事件传递参数。1234567891011121314151617&amp;lt;div class=&amp;quot;letn&amp;quot; @click=&amp;quot;Allchannels&amp;quot;&amp;">
+<meta name="description" content="需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &amp;quot;vue&amp;quot;;export default new Vue(); 2.组件A,点击事件传递参数。1234567891011121314151617&amp;lt;div class=&amp;quot;letn&amp;quot; @click=&amp;quot;Allchann">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue子组件之间的点击事件传值">
 <meta property="og:url" content="http://yoursite.com/2018/12/29/Vue/index.html">
 <meta property="og:site_name" content="罗建的个人博客">
-<meta property="og:description" content="需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &quot;vue&quot;;export default new Vue(); 2.组件A,点击事件传递参数。1234567891011121314151617&amp;lt;div class=&amp;quot;letn&amp;quot; @click=&amp;quot;Allchannels&amp;quot;&amp;">
+<meta property="og:description" content="需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &amp;quot;vue&amp;quot;;export default new Vue(); 2.组件A,点击事件传递参数。1234567891011121314151617&amp;lt;div class=&amp;quot;letn&amp;quot; @click=&amp;quot;Allchann">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-29T10:06:10.876Z">
+<meta property="og:updated_time" content="2018-12-29T11:13:26.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue子组件之间的点击事件传值">
-<meta name="twitter:description" content="需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &quot;vue&quot;;export default new Vue(); 2.组件A,点击事件传递参数。1234567891011121314151617&amp;lt;div class=&amp;quot;letn&amp;quot; @click=&amp;quot;Allchannels&amp;quot;&amp;">
+<meta name="twitter:description" content="需求:A组件可以点击当前时间改变B组件的参数值。1.先创建一个bus.js文件，当做中间媒介。123import Vue from &amp;quot;vue&amp;quot;;export default new Vue(); 2.组件A,点击事件传递参数。1234567891011121314151617&amp;lt;div class=&amp;quot;letn&amp;quot; @click=&amp;quot;Allchann">
 
 
 
@@ -341,7 +341,7 @@
       
 
       
-        <h1 id="需求-A组件可以点击当前时间改变B组件的参数值。"><a href="#需求-A组件可以点击当前时间改变B组件的参数值。" class="headerlink" title="需求:A组件可以点击当前时间改变B组件的参数值。"></a>需求:A组件可以点击当前时间改变B组件的参数值。</h1><h2 id="1-先创建一个bus-js文件，当做中间媒介。"><a href="#1-先创建一个bus-js文件，当做中间媒介。" class="headerlink" title="1.先创建一个bus.js文件，当做中间媒介。"></a>1.先创建一个bus.js文件，当做中间媒介。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import Vue from <span class="string">"vue"</span>;</span><br><span class="line"><span class="built_in">export</span> default new Vue();</span><br></pre></td></tr></table></figure>
+        <h1 id="需求-A组件可以点击当前时间改变B组件的参数值。"><a href="#需求-A组件可以点击当前时间改变B组件的参数值。" class="headerlink" title="需求:A组件可以点击当前时间改变B组件的参数值。"></a>需求:A组件可以点击当前时间改变B组件的参数值。</h1><h2 id="1-先创建一个bus-js文件，当做中间媒介。"><a href="#1-先创建一个bus-js文件，当做中间媒介。" class="headerlink" title="1.先创建一个bus.js文件，当做中间媒介。"></a>1.先创建一个bus.js文件，当做中间媒介。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import Vue from &quot;vue&quot;;</span><br><span class="line">export default new Vue();</span><br></pre></td></tr></table></figure>
 <h2 id="2-组件A-点击事件传递参数。"><a href="#2-组件A-点击事件传递参数。" class="headerlink" title="2.组件A,点击事件传递参数。"></a>2.组件A,点击事件传递参数。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;letn&quot; @click=&quot;Allchannels&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">//引入中间媒介</span><br><span class="line">import bus from &apos;@/assets/bus&apos;</span><br><span class="line">export default &#123;</span><br><span class="line">	data():&#123;</span><br><span class="line">		return:switcha</span><br><span class="line">	&#125;</span><br><span class="line">	methods:&#123;</span><br><span class="line">		Allchannels()&#123;</span><br><span class="line">	      //通过emit触发事件，并传值</span><br><span class="line">	      bus.$emit(&quot;eventTarget&quot;,this.switcha);</span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="3-组件B-接收组件A的传值。"><a href="#3-组件B-接收组件A的传值。" class="headerlink" title="3.组件B,接收组件A的传值。"></a>3.组件B,接收组件A的传值。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;.dialog&quot; v-if=&quot;switcha&quot;&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import bus from &apos;@/assets/bus&apos;</span><br><span class="line">export default &#123;</span><br><span class="line">   data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        switcha:false</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">   mounted()&#123;</span><br><span class="line">     //通过on监听事件，回调方法获取数据</span><br><span class="line">      bus.$on(&quot;eventTarget&quot;,res=&gt;&#123;</span><br><span class="line">        this.switcha = res;</span><br><span class="line">      &#125;)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
       
@@ -444,7 +444,7 @@
               <img class="site-author-image" itemprop="image" src="/uploads/touxiang.jpg" alt="罗建">
             
               <p class="site-author-name" itemprop="name">罗建</p>
-              <p class="site-description motion-element" itemprop="description">学习，日积月累。</p>
+              <p class="site-description motion-element" itemprop="description">学习生活，日积月累。</p>
           </div>
 
           <nav class="site-state motion-element">
